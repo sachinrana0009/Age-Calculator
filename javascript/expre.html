@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <h3>Regular expression</h3>
+        <p id="res"></p>
+
+    <script>
+        let str = "hello,I am learnig javascript and regular expression in javascript.56546546";
+        //regular expression 
+        //let n = str.search(/Learnig/i);
+
+        //let n = str.replace(/Learnig/i,"learn");
+        //global check
+        // let n = str.match(/javascript/g);
+
+        //string start with perticular word or not
+
+        // let n = str.match(/^hello/m);
+
+        //existance of perticular word or letter
+        // let n = str.match(/[lo]/g);
+
+        //find any digit present or not 
+        // let n = str.match(/\d/g);
+
+        // count the white spaces
+
+        // let n = str.match(/\s/g);
+
+        // word start with or ending with specifice word
+
+        // let n = str.match(/\bja/g);
+        
+        let n = str.match(/on\b/g);
+
+
+         document.getElementById("res").innerHTML=n;
+
+    </script>
+</body>
+</html>

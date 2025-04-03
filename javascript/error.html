@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Errors</title>
+</head>
+<body>
+    <h1>JS Error Handling</h1>
+    <h3>Try  Catch Throw Finally</h3>
+    <p>Please input a number 10-20:</p>
+    <input type="text"  id="input" title="Input">
+    <button type="button" onclick="validateInput()">Test Value</button>
+    <p id="res"></p>
+    <script>
+        // try
+        // {
+        //     addalert("Hello Script");
+        // }
+        // catch(err)
+        // {
+        //     document.getElementById("res").innerHTML=err.message;
+        // }
+        function validateInput()
+        {
+            const msg=document.getElementById("res");
+            msg.innerHTML="";
+            let x=document.getElementById("input").value;
+            try
+            {
+                if(x.trim()=="")
+                {
+                    throw "Empty";
+                }
+                if(isNaN(x))
+                {
+                    throw "Not a number";
+                }
+                if(x<10)
+                {
+                    throw "Number is Low";
+                }
+                if(x>20)
+                {
+                    throw "Number is Big";
+                }
+                msg.innerHTML=x;
+            }
+            catch(err)
+            {
+                msg.innerHTML="Input is" + " " + err;
+            }
+            finally
+            {
+                document.getElementById("input").value="";
+            }
+        }
+    </script>
+</body>
+</html>

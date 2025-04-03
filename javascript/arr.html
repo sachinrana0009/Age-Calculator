@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            font-size: 30px;
+            font-style: italic;
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+        <h1>Arrays Methods</h1>
+        <p id="res"></p>
+        <p id="res1"></p>
+
+
+        <script>
+                const std =["ram","sachin","amit","rana","aditya"];
+                std[0]= "Sita";
+                // std.splice(1,0,"Rama" );
+
+                const sub=std.slice(1,4);
+
+                // std.sort();
+                std.reverse();
+                
+
+                // const person = [];
+                // person[0]="ashok";
+                // person[2]="sharama";
+
+                //functions
+                // const s = new Array("rana","sachin","king");
+               
+                //print all the element of the list by using the list
+                let str = "<ol>";
+                    std.forEach(myfun);
+                    str+="</ol>"
+                function myfun(value){
+                    str+="<li>"+value+ "</li>";
+                }
+
+                // document.getElementById("res").innerHTML=std.toString();
+
+                // document.getElementById("res").innerHTML=std.join("-");
+
+                document.getElementById("res").innerHTML=sub;
+
+                document.getElementById("res1").innerHTML=std.join("%");
+
+
+    
+
+
+        </script>
+</body>
+</html>

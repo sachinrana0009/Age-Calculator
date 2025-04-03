@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Window & Screen</title>
+    <style>
+        p
+        {
+            font-size: large;
+            font-weight: bold;
+            padding: 20px;
+            margin: 30px;
+        }
+        #res
+        {
+            color: red;
+        }
+        #res1
+        {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <h3>JS Window-BOM</h3>
+    <p id="res"></p>
+    <p id="res1"></p>
+    <button type="button" onclick="newWin()">Click</button>
+    <button type="button" onclick="goBack()">Back</button>
+    <script>
+        // let x=window.innerWidth;
+        // let y=window.innerHeight;
+        // let x=screen.availWidth;
+        // let y=screen.availHeight;
+        // let x=screen.colorDepth;
+        // let y=screen.pixelDepth;
+        let x=window.location.port;
+        function newWin()
+        {
+            let y=location.assign("https://www.google.co.in");
+        }
+        function goBack()
+        {
+            history.back();
+        }
+        document.getElementById("res").innerHTML=x;
+        document.getElementById("res1").innerHTML=y;
+    </script>
+</body>
+</html>
